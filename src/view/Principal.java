@@ -8,18 +8,17 @@ public class Principal {
 	public static void main (String[] args) {
 		
 		
-	    int entrada;
-	    
-	    
-	    entrada = Integer.parseInt(JOptionPane.showInputDialog(null, "Insira o número do Fatorial",JOptionPane.QUESTION_MESSAGE));
-	    while (entrada > 12){
-	    	entrada = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite novamente o número do Fatorial",JOptionPane.QUESTION_MESSAGE));
-	    		    }
-	    
-	    
+	    int numfat;
 	    FatorialController dc = new FatorialController();
-	    int saida = 0;
-		int fat = dc.fat(entrada, saida);
+	    
+	    do {
+	    	numfat = Integer.parseInt(JOptionPane.showInputDialog(null, "Insira o número do Fatorial",JOptionPane.QUESTION_MESSAGE));
+	    }   while (numfat <= 0 || numfat > 12 );{
+	    	   		    }
+	    
+	    
+	    
+	    int fat = dc.fat(numfat);
 		System.out.println(fat);
 		
 	}

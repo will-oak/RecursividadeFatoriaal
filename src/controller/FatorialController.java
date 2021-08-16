@@ -6,18 +6,15 @@ public class FatorialController {
 	 super();
 }
 
-	public int fat(int entrada, int saida) {
+	public int fat(int numfat) {
 		//Condição de parada = 1
-       int armaz = 0; 
-		if (entrada == 1) {
-			return 0;
+       
+		if (numfat == 1) {
+			return 1;
 		} 
-		
-		else {
-			armaz = entrada * (entrada - 1);
-			
+		else {		
 		}
-		return saida + fat(entrada - 1, saida+armaz);
+		return numfat * fat(numfat - 1);
 	}
 	
 }
